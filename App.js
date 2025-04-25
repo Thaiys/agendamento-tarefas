@@ -4,7 +4,6 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Home from './src/screens/Home';
 import EditTask from './src/screens/EditTask';
 
-
 const RootStack = createNativeStackNavigator({
   initialRouteName: 'Home',
   screenOptions: {
