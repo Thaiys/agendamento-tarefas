@@ -1,25 +1,31 @@
-import { View, Text, StyleSheet } from 'react-native';
-import { TextInput } from 'react-native-web';
+import { View, Text, StyleSheet, TextInput } from 'react-native';
+import { Picker } from '@react-native-picker/picker';
 
 export default function NovaTarefa() {
     return (
         <View>
             <View style={styles.cabecalho}>
                 <Text style= {styles.titulo}>Adicionar Tarefa</Text>
-                <View style= {styles.icone}></View>
+                
             </View>
-            <View style={styles.tarefa}>
-                <Text> Nome da Tarefa</Text>
+            <View style={styles.boby}>
+                <Text style= {styles.texto}> Nome da Tarefa:</Text>
+                <TextInput style={styles.TextInput}/>
 
-            </View>
-            <View>
-                <TextInput
-                style={styles.input}
-                />
+                <Text style={styles.texto}> Categoria da Tarefa:</Text>
+                <Picker style={styles.TextInput}>
+                    <Picker.Item label="Estudo" value="estudo"/>
+                    <Picker.Item label="Trabalho" value="trabalho"/>
+                    <Picker.Item label="Reunião" value="reunião"/>
+                    <Picker.Item label="Prova" value="prova"/>
+                    <Picker.Item label= 
+                </Picker>
+
+                
             </View>
         </View>
     )
-}
+};
 
 
 const styles = StyleSheet.create({
